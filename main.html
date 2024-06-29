@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="ui.css">
+    <title>UPI QRCODE GENERATOR</title>
+</head>
+<body>
+    <div class="top">
+        UPI QRCODE GENERATOR
+    </div>
+    <Section>
+        Simply enter the details and get your QR Code instantly. Customer can directly pay you that amount that you've generated in your QRCode. Works with any payment apps that support UPI transactions like Google Pay, WhatsApp Pay, Amazon Pay, Paytm, PhonePe or any BHIM UPI app.
+        <section class="warning">
+            <span class="fa fa-warning"></span> Code you generate is created within browser. None of your data is stored, transmitted or collected to us.
+        </section>
+    </Section>
+
+    <div class="gridPanel">
+        <div class="panel1">
+        <label for="merName">Merchant/Payee Name:</label><br>
+        <input type="text" id="merName" autocapitalize="off" autocorrect="off" placeholder="Enter your name..." name="merName" onkeyup="generateQRCode()"><br>
+
+        <label for="merVPA">UPI ID/VPA:</label><br>
+        <input type="text" id="merVPA" autocapitalize="off" autocorrect="off" placeholder="Enter your VPA..." name="merVPA" maxlength="50" onkeyup="generateQRCode()"><br>
+
+        <label for="merAmu">Amount to be recieve:</label><br>
+        <input type="number" id="merAmu" placeholder="Enter your amount..." name="merAmu" maxlength="10" onkeyup="generateQRCode()"><br>
+
+        <label for="merDes">Description (Optional):</label><br>
+        <input type="text" id="merDes" autocapitalize="off" autocorrect="off" placeholder="Enter Description..." name="merDes" maxlength="50" onkeyup="generateQRCode()"><br>
+
+        <label for="merURL">Site URL (Optional):</label><br>
+        <input type="url" id="merURL" autocapitalize="off" autocorrect="off" placeholder="Enter site url starting with https..." name="merURL" maxlength="50" onkeyup="generateQRCode()"><br>
+    </div>
+    <div class="panel2">
+        <div class="qrCodePanel"><div id="qrcode"></div></div>
+
+            <button type="button" onclick="downloadQRCode()">Download QRCode</button>
+            <button type="button" onclick="payUPI()">Pay though UPI</button>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2024 <a href="https://github.com/powercomp750">powercomp750</a> | View on <a href="https://github.com/powercomp750/UPI-QR-Generator"><span class="fa fa-github"> </span> Github</a>
+    </div>
+    <script src="main.js" type="text/javascript"></script>
+</body>
+</html>
