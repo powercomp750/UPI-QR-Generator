@@ -52,8 +52,11 @@ On right panel, you see 3 elements:
 * **Download QR Code** - Download QR Code directly in your browser and save it offline on your device.
 * **Pay though UPI** - Initiate payment directly using your own UPI app on your device.
 
-> [!NOTE]  
-> UPI is only available for Indian users.
+> [!Tip]  
+> UPI transactions work across all over India.<br>
+> For International payments, they currently are supported in **Bhutan, France, Mauritius, Nepal, Singapore, Sri Lanka and UAE**.<br>
+> UPI is expanding across many countries and we can expect more countries to accept payements.<br>
+> More details are provided [here](https://www.npci.org.in/what-we-do/upi-global/upi-global-acceptance/live-members).
 
 ## 📂Codebase
 Entire project is coded in HTML5, CSS and plain JavaScript. 
